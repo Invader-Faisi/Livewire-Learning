@@ -12,4 +12,6 @@
             <button class="btn btn-info" wire:click='decre'>-</button>
         </div>                
     </div>
+    {{-- adding the livewire component in another component --}}
+    <livewire:examples.create-user />
 </div>

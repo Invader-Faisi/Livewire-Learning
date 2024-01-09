@@ -1,3 +1,23 @@
 When we want to render full page component we have to use the layout file.
 
 php artisan livewire:layout => to create the layout file by default it will create the folder component and layout file named app.blade.php inside it. you can change it from config file.
+
+php artisan make:livewire Examples.ShowUser --inline => will create the single php file not the blade file.
+php artisan make:livewire Examples.ShowUser => will create two files one in resources folder and other is in app folder. 
+above command is used for component creation.
+
+inline components are having html code inside the php file.
+
+php artisan livewire:stubs => used for creating custom components
+This will create four new files in your application:
+
+stubs/livewire.stub — used for generating new components
+stubs/livewire.inline.stub — used for generating inline components
+stubs/livewire.test.stub — used for generating test files
+stubs/livewire.view.stub — used for generating component views
+
+you can modify them. after modifing you can run normal component creation commands and modification will be reflected in your components.
+
+for injecting the livewire component inside other component or in blade file you have mentioned the its proper location if it is not inside the component or livewire folder. i.e <livewire:examples.create-user />
+
+We can pass data to view from php class of livewire with the with() function.
