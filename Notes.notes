@@ -21,3 +21,23 @@ you can modify them. after modifing you can run normal component creation comman
 for injecting the livewire component inside other component or in blade file you have mentioned the its proper location if it is not inside the component or livewire folder. i.e <livewire:examples.create-user />
 
 We can pass data to view from php class of livewire with the with() function.
+
+layout file is used to render full page component.
+
+Attributes from php file can be passed such as title.
+title can also be passed while chaning the view method from render function. i.e => return view('livewire.examples.counter')->title('Title');
+for metadata => return view('livewire.examples.counter')->laoutData(['Title' => 'a', etc]);
+
+we add the layout attribute or chain the layout with render function to force the component to use the specific layout.
+#[Layout('components.layouts.app')]
+=> return view('livewire.examples.counter')->layout('layouts.app);
+
+Validation Rules can also be applied from attribute class in .php file.
+
+wire:model.live => this will send request after every keyup in form fields.
+
+[Form Object]
+
+1.  command to create form object => php artisan live:form RegisterUser;
+2.  This command will create php file inside app/livewire/forms folder.
+
