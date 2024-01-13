@@ -50,4 +50,6 @@ wire:model.live => this will send request after every keyup in form fields.
 1.  mount()
 2.  updated[what ever the name of property to update]() => public $selectedCounty = null; => public function updatedselectedCounty();
 
-
+[File Upload]
+1. use WithFileUploads; => trait is used to upload the files to database;
+2.  $this->file->store('files'); => will store the file in the folder => storage/app/files
