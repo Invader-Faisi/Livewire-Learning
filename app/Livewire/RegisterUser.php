@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\RegisterForm;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -10,14 +11,7 @@ class RegisterUser extends Component
 {
     #[Title('Register')]
 
-
-    #[Rule('required', as: 'Full Name')]
-    public $name;
-    #[Rule('required|unique:users|email', message: 'New Email')]
-    public $email;
-    #[Rule('required|min:5')]
-    public $password;
-
+    public RegisterForm $form;
 
     public function render()
     {
@@ -26,7 +20,7 @@ class RegisterUser extends Component
 
     public function RegisterUser()
     {
-        $this->validate();
+        $this->form->validate();
         dd(123);
     }
 }

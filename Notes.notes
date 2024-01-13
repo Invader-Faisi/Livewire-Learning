@@ -40,4 +40,14 @@ wire:model.live => this will send request after every keyup in form fields.
 
 1.  command to create form object => php artisan live:form RegisterUser;
 2.  This command will create php file inside app/livewire/forms folder.
+3.  It is used: if we have lots of rule for validation etc.
+4.  Usage of Form: Import the form class in the livewire component class.
+5.  $this->form->validate(); for form validation.
+6.  wire:model='form.password' => used if validating from the form class.
+
+[Life Cycle Hooks]
+
+1.  mount()
+2.  updated[what ever the name of property to update]() => public $selectedCounty = null; => public function updatedselectedCounty();
+
 

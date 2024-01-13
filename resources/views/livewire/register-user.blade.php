@@ -5,27 +5,27 @@
     <!-- Name input -->
     <div class="form-outline mb-4">
         {{-- Binding the name property with backend (RegisterUser.php class) --}}
-        <input type="text" name="name" wire:model='name' class="form-control" />
+        <input type="text" name="name" wire:model='form.name' class="form-control" />
         <label class="form-label" for="name">Full Name</label>
-        @error('name')
+        @error('form.name')
             <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
 
   <!-- Email input -->
   <div class="form-outline mb-4">
-    <input type="email" name="email" wire:model='email' class="form-control" />
+    <input type="email" name="email" wire:model='form.email' class="form-control" />
     <label class="form-label" for="email">Email address</label>
-    @error('email')
+    @error('form.email')
     <span class="text-danger">{{$message}}</span>
     @enderror
   </div>
 
   <!-- Password input -->
   <div class="form-outline mb-4">
-    <input type="password" name="password" wire:model='password' class="form-control" />
+    <input type="password" name="password" wire:model='form.password' class="form-control" />
     <label class="form-label" for="password">Password</label>
-    @error('password')
+    @error('form.password')
     <span class="text-danger">{{$message}}</span>
     @enderror
   </div>
