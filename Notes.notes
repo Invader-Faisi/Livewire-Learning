@@ -66,7 +66,12 @@ wire:model.live => this will send request after every keyup in form fields.
 3.  <span>{{$users->links()}}</span> => used for showing pagination.
 4.  cursorPaginate(5); is used for next and previous button only.
 
-[Search Bar]
+[Search Bar] => see Pagination
+
+[Computed Property]
+1.  Used when you have very heavy quries to execute. see the pagination.php file.
+
+
 
 
 

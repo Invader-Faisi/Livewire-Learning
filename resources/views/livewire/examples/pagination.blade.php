@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($users as $user)
+            @foreach ($this->users as $user)
                 <tr>
                     <th scope="row">{{$user->id}}</th>
                     <td>{{$user->name}}</td>
@@ -35,5 +35,5 @@
             @endforeach            
         </tbody>
     </table>
-    <span>{{$users->links()}}</span>
+    <span>{{$this->users->links()}}</span>
 </div>
