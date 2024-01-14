@@ -56,3 +56,23 @@ wire:model.live => this will send request after every keyup in form fields.
 
 [Navigation]
 1.  livewire:navigate attribute is used in blade component to navigate to certain link.
+
+[Lazy Loading]
+1.  used when some queries required more time to execute. So to avoid the waiting we use lazyloading.
+
+[Pagination]
+1.  use WithPagination; trait is used for pagination.
+2.  Change the pagination theme from livewire config file.
+3.  <span>{{$users->links()}}</span> => used for showing pagination.
+4.  cursorPaginate(5); is used for next and previous button only.
+
+
+
+
+
+
+
+
+
+
+

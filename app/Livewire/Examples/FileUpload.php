@@ -50,6 +50,7 @@ class FileUpload extends Component
             return Storage::download($file->path, $file->name);
         }
         session()->flash('status', 'File not found');
+        return $this->redirect('fileUpload', navigate: true);
     }
     public function render()
     {

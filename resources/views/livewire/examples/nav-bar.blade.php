@@ -29,6 +29,10 @@
                 <li class="nav-item">
                     <a wire:navigate class="{{request()->is('/register') ? 'nav-link active' : 'nav-link'}}" href="/register">Register</a>
                 </li>
+                <li class="nav-item">
+                    <a wire:navigate class="{{request()->is('/users') ? 'nav-link active' : 'nav-link'}}"
+                        href="/users">Users</a>
+                </li>
             </ul>
             <!-- Left links -->
         </div>
