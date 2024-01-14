@@ -14,6 +14,7 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
+        <livewire:examples.nav-bar/>
         <div class="container">
             {{-- here our components will be injected --}}
             {{ $slot }}
