@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Products;
 
+use App\Models\Product;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -22,13 +23,15 @@ class CreateProducts extends Component
 
     public function AddProduct()
     {
-        $this->validate();
+        $product = $this->validate();
+        Product::create($product);
         session()->flash('status', 'Product created');
         $this->reset();
     }
 
     public function close()
     {
+        $this->dispatch('Product_Added');
         $this->reset();
     }
 }
