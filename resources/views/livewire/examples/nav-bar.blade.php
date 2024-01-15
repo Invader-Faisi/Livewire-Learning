@@ -33,6 +33,15 @@
                     <a wire:navigate class="{{request()->is('/users') ? 'nav-link active' : 'nav-link'}}"
                         href="/users">Users</a>
                 </li>
+                <li class="nav-item">
+                    <a wire:navigate class="{{request()->is('/products') ? 'nav-link active' : 'nav-link'}}" href="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a wire:navigate class="{{request()->is('/polling') ? 'nav-link active' : 'nav-link'}}" href="/polling">Polling</a>
+                </li>
+                <li class="nav-item">
+                    <a wire:navigate class="{{request()->is('/calculator') ? 'nav-link active' : 'nav-link'}}" href="/calculator">Calculator</a>
+                </li>
             </ul>
             <!-- Left links -->
         </div>

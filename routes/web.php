@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\AllProducts;
+use App\Livewire\Calculator\Calculator;
 use App\Livewire\Examples\Counter;
 use App\Livewire\Examples\DropDown;
 use App\Livewire\Examples\FileUpload;
@@ -32,3 +33,4 @@ Route::get('/fileUpload', FileUpload::class);
 Route::get('/users', Pagination::class);
 Route::get('/products', Products::class);
 Route::get('/polling', Polling::class);
+Route::get('/calculator', Calculator::class);
