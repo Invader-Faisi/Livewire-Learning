@@ -71,6 +71,9 @@ wire:model.live => this will send request after every keyup in form fields.
 [Computed Property]
 1.  Used when you have very heavy quries to execute. see the pagination.php file.
 
+[Same component for create and edit]
+1.  See the product page.
+
 
 
 

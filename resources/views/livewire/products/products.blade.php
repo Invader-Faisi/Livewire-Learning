@@ -23,7 +23,7 @@
                 <td>{{$product->description}}</td>
                 <td>{{$product->price}}</td>
                 <td>
-                    <button class="btn btn-sm btn-danger">Action</button>
+                    <button @click="$dispatch('edit-product', {id:{{$product->id}}})" class="btn btn-sm btn-danger" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal">Edit</button>
                 </td>
             </tr>
             @endforeach
