@@ -74,6 +74,18 @@ wire:model.live => this will send request after every keyup in form fields.
 [Same component for create and edit]
 1.  See the product page.
 
+[Polling]
+1.  Polling is used to run the code in backend ground. like checking the payment response or subscriber count.
+
+
+
+
+
+
+
+
+
+
 
 
 

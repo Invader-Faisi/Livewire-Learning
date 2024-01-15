@@ -46,9 +46,15 @@
                 <button wire:click='close' type="button" class="btn btn-secondary" data-mdb-ripple-init
                     data-mdb-dismiss="modal">Close</button>
                 @if ($editProduct)
-                    <button type="button" wire:click='UpdateProduct' class="btn btn-info" data-mdb-ripple-init>Update</button>
+                    <button type="button" wire:click='UpdateProduct' class="btn btn-info" data-mdb-ripple-init>Update
+                        <div wire:loading class="spinner-border spinner-border-sm text-primary" role="status">
+                        </div>
+                    </button>
                 @else
-                    <button type="button" wire:click='AddProduct' class="btn btn-primary" data-mdb-ripple-init>Add</button>
+                    <button type="button" wire:click='AddProduct' class="btn btn-primary" data-mdb-ripple-init>Add
+                        <div wire:loading class="spinner-border spinner-border-sm text-primary" role="status">
+                        </div>
+                    </button>
                 @endif           
             </div>
         </div>

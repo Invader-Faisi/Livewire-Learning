@@ -23,7 +23,8 @@
                 <td>{{$product->description}}</td>
                 <td>{{$product->price}}</td>
                 <td>
-                    <button @click="$dispatch('edit-product', {id:{{$product->id}}})" class="btn btn-sm btn-danger" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal">Edit</button>
+                    <button @click="$dispatch('edit-product', {id:{{$product->id}}})" class="btn btn-sm btn-info" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal"><i class="fas fa-pen-to-square"></i></button>
+                    <button @click="$dispatch('delete-product', {id:{{$product->id}}})" class="btn btn-sm btn-danger" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#deleteModal"><i class="fas fa-trash"></i></button>
                 </td>
             </tr>
             @endforeach
@@ -32,4 +33,14 @@
     <span>{{$this->products->links()}}</span>
 
     <livewire:products.create-products/>
+    <livewire:products.delete-product/>
+
+    <script>
+        $(document).ready(function() {
+            
+            $('.close').click(function(){
+                $('#deleteModal').modal('hide');
+            }); 
+        });
+    </script>
 </div>

@@ -28,4 +28,10 @@ class Products extends Component
     {
         $this->render();
     }
+
+    #[On('Product_Deleted')]
+    public function ProductDeleted()
+    {
+        $this->render();
+    }
 }
