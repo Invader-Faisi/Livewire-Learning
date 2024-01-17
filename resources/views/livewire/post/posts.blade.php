@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="d-flex flex-row-reverse mb-3">
+    <a href="/create-post" class="btn btn-success btn-lg">Create Post</a>
+    </div>
     @foreach ($posts as $post)   
     
     <!--Grid row-->
