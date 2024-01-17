@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\AllProducts;
+
 use App\Livewire\Calculator\Calculator;
 use App\Livewire\Examples\Counter;
 use App\Livewire\Examples\DropDown;
@@ -9,6 +9,7 @@ use App\Livewire\Examples\Pagination;
 use App\Livewire\Examples\Polling;
 use App\Livewire\Products\Products;
 use App\Livewire\RegisterUser;
+use App\Livewire\Post\Posts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,4 @@ Route::get('/users', Pagination::class);
 Route::get('/products', Products::class);
 Route::get('/polling', Polling::class);
 Route::get('/calculator', Calculator::class);
+Route::get('/posts', Posts::class);

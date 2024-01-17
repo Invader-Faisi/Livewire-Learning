@@ -81,6 +81,9 @@ wire:model.live => this will send request after every keyup in form fields.
 1.  Events can be dispatched via dispatched method and can be caught in any component. additional parameters can also be passed.
 2. See the products folder.
 
+[Infinite Scrolling]
+1. See the posts folder
+
 
 
 

@@ -42,6 +42,10 @@
                 <li class="nav-item">
                     <a wire:navigate class="{{request()->is('/calculator') ? 'nav-link active' : 'nav-link'}}" href="/calculator">Calculator</a>
                 </li>
+                <li class="nav-item">
+                    <a wire:navigate class="{{request()->is('/posts') ? 'nav-link active' : 'nav-link'}}"
+                        href="/posts">Posts</a>
+                </li>
             </ul>
             <!-- Left links -->
         </div>
