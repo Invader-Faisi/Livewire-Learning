@@ -10,7 +10,11 @@ class Calculator extends Component
 {
     #[Title('Calculator')]
 
-    public $input_output = 0;
+    public $input = 0;
+
+    public $result = 0;
+
+    public $operator;
 
     public function render()
     {
@@ -24,40 +28,54 @@ class Calculator extends Component
 
     public function digit($digit)
     {
-        if ($this->input_output == 0) {
-            $this->input_output = $digit;
+        if ($this->input == 0) {
+            $this->input = $digit;
         } else {
-            $this->input_output = $this->input_output . $digit;
+            $this->input = $this->input . $digit;
+        }
+    }
+
+    public function dot()
+    {
+        if (!Str::contains($this->input, ".")) {
+            $this->input = $this->input . ".";
         }
     }
 
     public function operation($action)
     {
-        if (Str::endsWith($this->input_output, ['+', '*', '-', '/', '.'])) {
-            $this->input_output = Str::substrReplace($this->input_output, $action, -1);
+        if ($this->result == 0) {
+            $this->result = $this->input;
+            $this->input = '';
+            $this->operator = $action;
         } else {
-            $this->input_output = $this->input_output . $action;
+            $calculation = $this->result . $this->operator . $this->input;
+            $this->result = eval("return $calculation;");
+            $this->input = '';
+            $this->operator = $action;
         }
     }
 
     public function clear()
     {
-        if (Str::length($this->input_output > 1)) {
-            $this->input_output =
-                Str::substrReplace($this->input_output, '', -1);
+        if (Str::length($this->input > 1)) {
+            $this->input = Str::substrReplace($this->input, '', -1);
         } else {
-            $this->reset('input_output');
+            $this->reset('input');
         }
     }
 
-    public function result()
+    public function calculate()
     {
-        if (Str::endswith($this->input_output, ['/', '+', '-', '*', '.'])) {
-            session()->flash('status', 'Operation invalid');
-        } elseif (Str::contains($this->input_output, '/0')) {
-            session()->flash('status', 'division by zero is undefined');
+        if ($this->input == null) {
+            session()->flash('status', 'Invalid Operation');
+        } else if ($this->operator == '/' && $this->input == 0) {
+            session()->flash('status', 'Division by Zero is undefined');
         } else {
-            $this->input_output = eval("return $this->input_output;");
+            $calculation = $this->result . $this->operator . $this->input;
+            $this->result = eval("return $calculation;");
+            $this->operator = null;
+            $this->input = '';
         }
     }
 }
