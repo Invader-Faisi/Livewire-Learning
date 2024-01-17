@@ -36,11 +36,27 @@
     <livewire:products.delete-product/>
 
     <script>
-        $(document).ready(function() {
-            
-            $('.close').click(function(){
-                $('#deleteModal').modal('hide');
+        $(document).ready(function() {            
+            $('.deleted').click(function(){
+                setTimeout(()=>{
+                    $('#deleteModal').modal('hide');
+                },2000)                
             }); 
+
+            $('.add-edit').click(function(){
+                setTimeout(() => {
+                    $('#exampleModal').modal('hide');
+                }, 2000);                
+            });
         });
+        // catching event inside the component [closing the modal if using bootstrap]
+        // window.addEventListener('Product_Added', event => {
+        //     var modal = document.getElementById('exampleModal');
+        //     modal = bootstrap.Modal.getInstance(modal);
+        //     setTimeout(()=>{
+        //         modal.hide();
+        //     },2000)
+            
+        // })
     </script>
 </div>

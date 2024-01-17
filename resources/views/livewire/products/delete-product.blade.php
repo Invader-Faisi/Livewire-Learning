@@ -12,7 +12,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-mdb-ripple-init
                     data-mdb-dismiss="modal">Close</button>
-                <button wire:click='delete' type="button" class="btn btn-danger close" data-mdb-ripple-init>Delete</button>
+                <button wire:click='delete' type="button" class="btn btn-danger deleted" data-mdb-ripple-init>Delete</button>
             </div>
         </div>
     </div>

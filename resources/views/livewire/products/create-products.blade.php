@@ -51,7 +51,7 @@
                         </div>
                     </button>
                 @else
-                    <button type="button" wire:click='AddProduct' class="btn btn-primary" data-mdb-ripple-init>Add
+                    <button type="button" wire:click='AddProduct' class="btn btn-primary add-edit" data-mdb-ripple-init>Add
                         <div wire:loading class="spinner-border spinner-border-sm text-primary" role="status">
                         </div>
                     </button>

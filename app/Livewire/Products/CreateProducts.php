@@ -35,6 +35,7 @@ class CreateProducts extends Component
         $product = $this->validate();
         Product::create($product);
         session()->flash('status', 'Product created');
+        $this->dispatch('Product_Added');
         $this->reset();
     }
 
@@ -62,7 +63,6 @@ class CreateProducts extends Component
 
     public function close()
     {
-        $this->dispatch('Product_Added');
         $this->reset();
     }
 }

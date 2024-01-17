@@ -77,6 +77,9 @@ wire:model.live => this will send request after every keyup in form fields.
 [Polling]
 1.  Polling is used to run the code in backend ground. like checking the payment response or subscriber count.
 
+[Events]
+1.  Events can be dispatched via dispatched method and can be caught in any component. additional parameters can also be passed.
+2. See the products folder.
 
 
 
